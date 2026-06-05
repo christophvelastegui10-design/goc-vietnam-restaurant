@@ -1,0 +1,1674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goc Vietnam Restaurant | Authentic Vietnamese Cuisine in Plano, TX</title>
+  <meta name="description" content="Authentic Vietnamese cuisine in Plano, TX. Banh Xeo, Pho, Hu Tieu, Bun Bo Hue and more. Family-owned restaurant at 109 Legacy Dr. Open Tue-Sun.">
+  <meta property="og:title" content="Goc Vietnam Restaurant | Plano, TX">
+  <meta property="og:description" content="Authentic Vietnamese cuisine in the heart of Plano. Best Banh Xeo in the metroplex.">
+  <meta property="og:image" content="assets/images/exterior.jpg">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --red:        #8B1A1A;
+      --red-light:  #B52B2B;
+      --red-dark:   #5C1010;
+      --gold:       #C8973A;
+      --gold-light: #E8B85A;
+      --cream:      #FAF6EF;
+      --cream-dark: #F0E8D8;
+      --ink:        #1A1208;
+      --ink-muted:  #5A4A35;
+      --white:      #FFFFFF;
+
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body:    'DM Sans', system-ui, sans-serif;
+
+      --text-xs:   clamp(0.75rem,  1.5vw, 0.875rem);
+      --text-sm:   clamp(0.875rem, 1.8vw, 1rem);
+      --text-base: clamp(1rem,     2vw,   1.125rem);
+      --text-lg:   clamp(1.125rem, 2.5vw, 1.375rem);
+      --text-xl:   clamp(1.375rem, 3vw,   1.75rem);
+      --text-2xl:  clamp(1.75rem,  4vw,   2.5rem);
+      --text-3xl:  clamp(2.25rem,  5vw,   3.5rem);
+      --text-hero: clamp(3rem,     7vw,   5.5rem);
+
+      --space-xs:  0.25rem;
+      --space-sm:  0.5rem;
+      --space-md:  1rem;
+      --space-lg:  1.75rem;
+      --space-xl:  3rem;
+      --space-2xl: 5rem;
+      --space-3xl: 8rem;
+
+      --radius-sm: 4px;
+      --radius-md: 10px;
+      --radius-lg: 20px;
+
+      --shadow-sm: 0 2px 8px rgba(26,18,8,0.08);
+      --shadow-md: 0 6px 24px rgba(26,18,8,0.12);
+      --shadow-lg: 0 16px 48px rgba(26,18,8,0.18);
+
+      --transition: 280ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    .skip-link {
+      position: absolute;
+      transform: translateY(-100%);
+      padding: 0.5rem 1rem;
+      background: var(--red);
+      color: var(--white);
+      z-index: 9999;
+      transition: transform 150ms ease;
+    }
+    .skip-link:focus { transform: translateY(0); }
+
+    .container {
+      width: 100%;
+      max-width: 1180px;
+      margin-inline: auto;
+      padding-inline: clamp(1.25rem, 5vw, 2.5rem);
+    }
+
+    /* ─── BUTTONS ─── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 2rem;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-body);
+      font-size: var(--text-sm);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all var(--transition);
+      border: 2px solid transparent;
+    }
+    .btn--primary { background: var(--red); color: var(--white); }
+    .btn--primary:hover { background: var(--red-light); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(139,26,26,0.35); }
+    .btn--primary:active { transform: translateY(0); }
+    .btn--primary:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+    .btn--outline { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.6); }
+    .btn--outline:hover { background: rgba(255,255,255,0.12); border-color: var(--white); transform: translateY(-2px); }
+    .btn--outline:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+    .section-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .section-eyebrow::before,
+    .section-eyebrow::after {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    /* ─── NAV ─── */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 1.25rem 0;
+      transition: background var(--transition), padding var(--transition), box-shadow var(--transition);
+    }
+    .nav.scrolled {
+      background: rgba(26,18,8,0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 0.75rem 0;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+    .nav__inner { display: flex; align-items: center; justify-content: space-between; }
+    .nav__logo { display: flex; flex-direction: column; line-height: 1; }
+    .nav__logo-text { font-family: var(--font-display); font-size: clamp(1.3rem,3vw,1.7rem); font-weight: 600; color: var(--white); letter-spacing: 0.02em; }
+    .nav__logo-sub { font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-weight: 500; }
+    .nav__links { display: flex; align-items: center; gap: 2.5rem; }
+    .nav__link { font-size: var(--text-xs); font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.8); transition: color var(--transition); position: relative; }
+    .nav__link::after { content: ''; position: absolute; bottom: -3px; left: 0; width: 0; height: 1px; background: var(--gold); transition: width var(--transition); }
+    .nav__link:hover { color: var(--white); }
+    .nav__link:hover::after { width: 100%; }
+    .nav__cta { margin-left: 1rem; }
+    .nav__toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav__toggle span { display: block; width: 24px; height: 2px; background: var(--white); transition: all var(--transition); }
+
+    @media (max-width: 768px) {
+      .nav__links { display: none; position: fixed; inset: 0; background: rgba(26,18,8,0.98); flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; z-index: 99; }
+      .nav__links.is-open { display: flex; }
+      .nav__link { font-size: var(--text-lg); }
+      .nav__cta { display: none; }
+      .nav__toggle { display: flex; z-index: 100; }
+      .nav__toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav__toggle.is-open span:nth-child(2) { opacity: 0; }
+      .nav__toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(165deg, rgba(10,6,2,0.65) 0%, rgba(10,6,2,0.35) 45%, rgba(10,6,2,0.70) 100%),
+        url("assets/images/hero-interior.webp") center/cover no-repeat;
+    }
+    .hero__pattern {
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 80%, rgba(200,151,58,0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(139,26,26,0.15) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .hero__deco {
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: min(420px, 45vw);
+      aspect-ratio: 1;
+      opacity: 0.07;
+      pointer-events: none;
+    }
+    .hero__content { position: relative; z-index: 1; padding-top: 7rem; padding-bottom: 5rem; }
+
+    /* ─── HERO ENTRANCE ANIMATIONS ─── */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: var(--text-xs);
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeInUp 0.6s ease forwards;
+      animation-delay: 0.2s;
+    }
+    .hero__eyebrow::before { content: ''; display: block; width: 40px; height: 1px; background: var(--gold); }
+
+    .hero__title {
+      font-family: var(--font-display);
+      font-size: var(--text-hero);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+      max-width: 700px;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards;
+      animation-delay: 0.4s;
+    }
+    .hero__title em { font-style: italic; color: var(--gold-light); }
+
+    .hero__subtitle {
+      font-size: var(--text-lg);
+      color: rgba(255,255,255,0.72);
+      max-width: 520px;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+      opacity: 0;
+      animation: fadeInUp 0.6s ease forwards;
+      animation-delay: 0.7s;
+    }
+
+    .hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      opacity: 0;
+      animation: fadeInUp 0.6s ease forwards;
+      animation-delay: 1.0s;
+    }
+
+    .hero__badge {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.6rem 1.25rem;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 100px;
+      color: rgba(255,255,255,0.8);
+      font-size: var(--text-xs);
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      backdrop-filter: blur(8px);
+    }
+    .hero__badge-icon { color: var(--gold); }
+    .hero__stats { position: absolute; bottom: 2.5rem; left: 0; right: 0; z-index: 1; }
+    .hero__stats-inner { display: flex; gap: clamp(1.5rem, 4vw, 3rem); align-items: center; }
+    .hero__stat { text-align: center; }
+    .hero__stat-value { font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 600; color: var(--gold-light); line-height: 1; }
+    .hero__stat-label { font-size: var(--text-xs); color: rgba(255,255,255,0.55); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 0.25rem; }
+    .hero__stat-divider { width: 1px; height: 40px; background: rgba(255,255,255,0.15); }
+    .hero__scroll { position: absolute; right: clamp(1.5rem,5vw,3rem); bottom: 2.5rem; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; color: rgba(255,255,255,0.4); font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; writing-mode: vertical-rl; }
+    .hero__scroll::after { content: ''; width: 1px; height: 50px; background: linear-gradient(to bottom, rgba(255,255,255,0.4), transparent); animation: scrollLine 2s ease-in-out infinite; }
+    @keyframes scrollLine { 0%,100% { transform: scaleY(1); transform-origin: top; } 50% { transform: scaleY(0.4); transform-origin: top; } }
+
+    /* ─── RIBBON ─── */
+    .ribbon { background: var(--red); padding: 1rem 0; overflow: hidden; }
+    .ribbon__track { display: flex; gap: 3rem; align-items: center; animation: ticker 25s linear infinite; white-space: nowrap; width: max-content; }
+    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .ribbon__item { display: flex; align-items: center; gap: 1rem; font-size: var(--text-xs); font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.85); }
+    .ribbon__dot { width: 4px; height: 4px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+
+    /* ─── GALLERY STRIP ─── */
+    .gallery {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      grid-template-rows: 280px 280px;
+      gap: 6px;
+    }
+    .gallery__item {
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+    }
+    .gallery__item:first-child {
+      grid-row: 1 / 3;
+    }
+    .gallery__item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .gallery__item:hover img {
+      transform: scale(1.04);
+    }
+    .gallery__item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(26,18,8,0);
+      transition: background var(--transition);
+    }
+    .gallery__item:hover::after {
+      background: rgba(26,18,8,0.2);
+    }
+    @media (max-width: 768px) {
+      .gallery { grid-template-columns: 1fr 1fr; grid-template-rows: 200px 200px; }
+      .gallery__item:first-child { grid-row: auto; }
+    }
+
+    /* ─── LIGHTBOX ─── */
+    .lightbox { position:fixed; inset:0; background:rgba(0,0,0,0.92); z-index:1000; display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity 0.3s ease; }
+    .lightbox.is-open { opacity:1; pointer-events:all; }
+    .lightbox__img { max-width:90vw; max-height:90vh; object-fit:contain; border-radius:4px; }
+    .lightbox__close { position:absolute; top:1.5rem; right:1.5rem; background:none; border:none; color:white; font-size:2.5rem; cursor:pointer; line-height:1; opacity:0.8; transition:opacity 0.2s; }
+    .lightbox__close:hover { opacity:1; }
+    .lightbox__prev, .lightbox__next { position:absolute; top:50%; transform:translateY(-50%); background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); color:white; font-size:1.5rem; width:50px; height:50px; border-radius:50%; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background 0.2s; }
+    .lightbox__prev:hover, .lightbox__next:hover { background:rgba(255,255,255,0.25); }
+    .lightbox__prev { left:1.5rem; }
+    .lightbox__next { right:1.5rem; }
+    .lightbox__counter { position:absolute; bottom:1.5rem; left:50%; transform:translateX(-50%); color:rgba(255,255,255,0.6); font-size:0.875rem; font-family:'DM Sans',sans-serif; }
+
+    /* ─── ABOUT ─── */
+    .about { padding: var(--space-3xl) 0; background: var(--cream); }
+    .about__grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3rem,6vw,6rem); align-items: center; }
+
+    .about__visual { position: relative; }
+    .about__img-main {
+      width: 100%;
+      aspect-ratio: 4/5;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+    .about__img-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .about__badge {
+      position: absolute;
+      top: 1.5rem;
+      right: -1.5rem;
+      background: var(--gold);
+      color: var(--white);
+      padding: 1.25rem;
+      border-radius: 50%;
+      width: 90px;
+      height: 90px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+      line-height: 1.2;
+    }
+    .about__badge-num { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; line-height: 1; }
+    .about__badge-txt { font-size: 0.55rem; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.9; }
+
+    .about__img-accent {
+      position: absolute;
+      bottom: -2rem;
+      left: -2rem;
+      width: 170px;
+      aspect-ratio: 1;
+      border-radius: var(--radius-md);
+      border: 4px solid var(--cream);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+    .about__img-accent img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about__text h2 { font-family: var(--font-display); font-size: var(--text-3xl); font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 1.5rem; }
+    .about__text h2 em { font-style: italic; color: var(--red); }
+    .about__text p { color: var(--ink-muted); line-height: 1.8; margin-bottom: 1.25rem; font-size: var(--text-base); }
+    .about__features { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0 2.5rem; }
+    .about__feature { display: flex; align-items: flex-start; gap: 0.75rem; }
+    .about__feature-icon { flex-shrink: 0; width: 36px; height: 36px; background: rgba(139,26,26,0.08); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 1rem; }
+    .about__feature-label { font-weight: 600; color: var(--ink); font-size: var(--text-sm); }
+    .about__feature-text { font-size: var(--text-sm); color: var(--ink-muted); line-height: 1.5; }
+
+    @media (max-width: 768px) {
+      .about__grid { grid-template-columns: 1fr; }
+      .about__visual { order: -1; max-width: 420px; margin: 0 auto 3rem; }
+      .about__badge { right: 0; }
+    }
+
+    /* ─── MENU ─── */
+    .menu { padding: var(--space-3xl) 0; background: var(--ink); position: relative; overflow: hidden; }
+    .menu::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+    .menu::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 0% 100%, rgba(139,26,26,0.2) 0%, transparent 50%), radial-gradient(ellipse at 100% 0%, rgba(200,151,58,0.1) 0%, transparent 50%); pointer-events: none; }
+
+    .menu__header { text-align: center; margin-bottom: 3.5rem; position: relative; z-index: 1; }
+    .menu__header .section-eyebrow { color: var(--gold); }
+    .menu__header .section-eyebrow::before, .menu__header .section-eyebrow::after { background: var(--gold); }
+    .menu__title { font-family: var(--font-display); font-size: var(--text-3xl); font-weight: 700; color: var(--white); letter-spacing: -0.02em; margin-bottom: 0.75rem; }
+    .menu__subtitle { color: rgba(255,255,255,0.5); font-size: var(--text-base); max-width: 500px; margin: 0 auto; }
+
+    /* ─── MENU FILTER TABS ─── */
+    .menu__tabs {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    .menu__tab {
+      padding: 0.55rem 1.25rem;
+      border-radius: 100px;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.04);
+      color: rgba(255,255,255,0.6);
+      font-family: var(--font-body);
+      font-size: var(--text-xs);
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+    .menu__tab:hover {
+      background: rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.9);
+      border-color: rgba(255,255,255,0.3);
+    }
+    .menu__tab.is-active {
+      background: var(--red);
+      color: var(--white);
+      border-color: var(--red);
+    }
+
+    .menu__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+      gap: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .dish-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: all var(--transition);
+    }
+    .dish-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255,255,255,0.07);
+      border-color: rgba(200,151,58,0.3);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.5);
+    }
+    .dish-card.is-hidden {
+      opacity: 0;
+      transform: scale(0.95);
+      pointer-events: none;
+    }
+    .dish-card__img {
+      width: 100%;
+      aspect-ratio: 16/10;
+      position: relative;
+      overflow: hidden;
+    }
+    .dish-card__img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .dish-card:hover .dish-card__img img { transform: scale(1.06); }
+    .dish-card__img-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+    }
+    .dish-card__badge {
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      background: var(--red);
+      color: var(--white);
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.6rem;
+      border-radius: 100px;
+      z-index: 1;
+    }
+    .dish-card__body { padding: 1.25rem 1.5rem 1.5rem; }
+    .dish-card__name { font-family: var(--font-display); font-size: var(--text-lg); font-weight: 600; color: var(--white); margin-bottom: 0.4rem; line-height: 1.3; }
+    .dish-card__viet { font-family: var(--font-display); font-style: italic; font-size: var(--text-sm); color: var(--gold); margin-bottom: 0.75rem; }
+    .dish-card__desc { font-size: var(--text-xs); color: rgba(255,255,255,0.5); line-height: 1.65; }
+    .dish-card__footer { display: flex; align-items: center; justify-content: space-between; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.08); }
+    .dish-card__stars { color: var(--gold); font-size: 0.7rem; letter-spacing: 1px; }
+    .dish-card__reviews { display: flex; align-items: center; gap: 0.4rem; font-size: var(--text-xs); color: rgba(255,255,255,0.4); }
+
+    /* placeholder gradients for dishes without photos */
+    .bg--bun-bo   { background: linear-gradient(135deg, #5A1A0A, #8B2A10); }
+    .bg--goi-cuon { background: linear-gradient(135deg, #1A3A20, #2A5A30); }
+    .bg--luc-lac  { background: linear-gradient(135deg, #3A1A0A, #6B2A10); }
+    .bg--egg-roll { background: linear-gradient(135deg, #4A3010, #8B6A20); }
+    .bg--banh-xeo { background: linear-gradient(135deg, #4A2010, #8B3A0A); }
+    .bg--hu-tieu  { background: linear-gradient(135deg, #3A2010, #6B3A20); }
+
+    /* ─── REVIEWS ─── */
+    .reviews { padding: var(--space-3xl) 0; background: var(--cream); }
+    .reviews__header { text-align: center; margin-bottom: 3.5rem; }
+    .reviews__title { font-family: var(--font-display); font-size: var(--text-3xl); font-weight: 700; color: var(--ink); letter-spacing: -0.02em; margin-bottom: 0.75rem; }
+    .reviews__meta { display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+    .reviews__score { display: flex; align-items: center; gap: 0.5rem; }
+    .reviews__score-num { font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 700; color: var(--red); }
+    .reviews__stars { font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; }
+    .reviews__count { font-size: var(--text-sm); color: var(--ink-muted); }
+    .reviews__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr)); gap: 1.5rem; }
+
+    .review-card { background: var(--white); border-radius: var(--radius-md); padding: 2rem; box-shadow: var(--shadow-sm); border: 1px solid rgba(26,18,8,0.06); transition: all var(--transition); position: relative; }
+    .review-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .review-card__quote { position: absolute; top: 1.5rem; right: 1.5rem; font-family: var(--font-display); font-size: 4rem; line-height: 1; color: rgba(139,26,26,0.08); font-style: italic; }
+    .review-card__stars { color: var(--gold); font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 1rem; }
+    .review-card__text { font-size: var(--text-sm); color: var(--ink-muted); line-height: 1.75; margin-bottom: 1.5rem; }
+    .review-card__highlight { display: inline; background: linear-gradient(120deg, rgba(200,151,58,0.2) 0%, rgba(200,151,58,0.2) 100%); background-repeat: no-repeat; background-size: 100% 0.25em; background-position: 0 88%; }
+    .review-card__footer { display: flex; align-items: center; gap: 0.75rem; padding-top: 1rem; border-top: 1px solid rgba(26,18,8,0.06); }
+    .review-card__avatar { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 0.9rem; color: var(--white); flex-shrink: 0; }
+    .review-card__name { font-weight: 600; font-size: var(--text-sm); color: var(--ink); }
+    .review-card__date { font-size: var(--text-xs); color: var(--ink-muted); margin-top: 0.1rem; }
+    .review-card__badge { margin-left: auto; font-size: 0.6rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); background: rgba(200,151,58,0.1); padding: 0.25rem 0.6rem; border-radius: 100px; }
+
+    /* ─── INFO STRIP ─── */
+    .info-strip { background: var(--red); padding: var(--space-xl) 0; }
+    .info-strip__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; align-items: start; }
+    .info-item { display: flex; gap: 1rem; align-items: flex-start; }
+    .info-item__icon { width: 44px; height: 44px; background: rgba(255,255,255,0.12); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
+    .info-item__label { font-size: var(--text-xs); font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 0.25rem; }
+    .info-item__value { color: var(--white); font-size: var(--text-sm); font-weight: 500; line-height: 1.5; }
+    .info-item__value a { color: var(--white); transition: opacity var(--transition); }
+    .info-item__value a:hover { opacity: 0.75; }
+
+    /* ─── HOURS ─── */
+    .hours { padding: var(--space-3xl) 0; background: var(--cream-dark); }
+    .hours__grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3rem,6vw,6rem); align-items: start; }
+    .hours__title { font-family: var(--font-display); font-size: var(--text-3xl); font-weight: 700; color: var(--ink); letter-spacing: -0.02em; margin-bottom: 1rem; }
+    .hours__subtitle { font-size: var(--text-base); color: var(--ink-muted); margin-bottom: 2rem; line-height: 1.7; }
+    .hours__table { background: var(--white); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); }
+    .hours__row { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; border-bottom: 1px solid rgba(26,18,8,0.05); transition: background var(--transition); }
+    .hours__row:last-child { border-bottom: none; }
+    .hours__row.today { background: rgba(139,26,26,0.05); }
+    .hours__day { font-weight: 500; font-size: var(--text-sm); color: var(--ink); }
+    .hours__row.today .hours__day { color: var(--red); font-weight: 600; }
+    .hours__time { font-size: var(--text-sm); color: var(--ink-muted); }
+    .hours__closed { color: var(--ink-muted); font-style: italic; font-size: var(--text-sm); }
+    .hours__tag { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; background: rgba(139,26,26,0.1); color: var(--red); padding: 0.2rem 0.5rem; border-radius: 100px; }
+
+    .hours__visual { display: flex; flex-direction: column; gap: 1.5rem; }
+    .hours__map-embed { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); }
+    .hours__map-link-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 1rem 1.5rem;
+      background: var(--red);
+      color: var(--white);
+      border-radius: var(--radius-md);
+      font-size: var(--text-sm);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: all var(--transition);
+    }
+    .hours__map-link-btn:hover { background: var(--red-light); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(139,26,26,0.35); }
+
+    @media (max-width: 768px) { .hours__grid { grid-template-columns: 1fr; } }
+
+    /* ─── CTA ─── */
+    .cta { padding: var(--space-3xl) 0; background: var(--ink); position: relative; overflow: hidden; text-align: center; }
+    .cta::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(139,26,26,0.25) 0%, transparent 60%), radial-gradient(ellipse at 50% 100%, rgba(200,151,58,0.1) 0%, transparent 60%); pointer-events: none; }
+    .cta__content { position: relative; z-index: 1; }
+    .cta__title { font-family: var(--font-display); font-size: var(--text-3xl); font-weight: 700; color: var(--white); letter-spacing: -0.02em; margin-bottom: 1rem; }
+    .cta__title em { color: var(--gold-light); font-style: italic; }
+    .cta__text { font-size: var(--text-lg); color: rgba(255,255,255,0.55); margin-bottom: 2.5rem; font-weight: 300; }
+    .cta__actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; }
+    .cta__phone { display: inline-flex; align-items: center; gap: 0.6rem; font-size: var(--text-lg); font-weight: 600; color: var(--gold-light); margin-top: 2rem; transition: color var(--transition); }
+    .cta__phone:hover { color: var(--white); }
+
+    /* ─── FOOTER ─── */
+    footer { background: #0E0A05; padding: var(--space-2xl) 0 var(--space-xl); border-top: 1px solid rgba(200,151,58,0.15); }
+    .footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: var(--space-xl); }
+    .footer__brand-name { font-family: var(--font-display); font-size: 1.6rem; font-weight: 600; color: var(--white); margin-bottom: 0.25rem; }
+    .footer__brand-tagline { font-size: var(--text-xs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; }
+    .footer__brand-desc { font-size: var(--text-sm); color: rgba(255,255,255,0.4); line-height: 1.7; max-width: 280px; }
+    .footer__col-title { font-size: var(--text-xs); font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 1.25rem; }
+    .footer__links { display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer__link { font-size: var(--text-sm); color: rgba(255,255,255,0.4); transition: color var(--transition); }
+    .footer__link:hover { color: var(--gold); }
+    .footer__bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding-top: var(--space-lg); border-top: 1px solid rgba(255,255,255,0.06); }
+    .footer__copy { font-size: var(--text-xs); color: rgba(255,255,255,0.25); }
+    .footer__health { display: flex; align-items: center; gap: 0.5rem; font-size: var(--text-xs); color: rgba(255,255,255,0.3); }
+    .footer__health-score { font-weight: 700; color: #4CAF50; }
+    @media (max-width: 768px) { .footer__grid { grid-template-columns: 1fr; } }
+
+    /* ─── MOBILE FIXES ─── */
+    @media (max-width: 480px) {
+      /* Hero stats — 2x2 grid on tiny screens */
+      .hero__stats-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      .hero__stat-divider { display: none; }
+      .hero__stat-value { font-size: var(--text-xl); }
+      .hero__stat-label { font-size: 0.6rem; }
+
+      /* Hero text */
+      .hero__content { padding-top: 6rem; padding-bottom: 8rem; }
+      .hero__actions { flex-direction: column; align-items: flex-start; }
+      .hero__badge { font-size: 0.7rem; }
+
+      /* Gallery — single column on very small */
+      .gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 200px);
+      }
+
+      /* Ribbon pause on reduced motion / small */
+      .ribbon__track { animation-duration: 18s; }
+
+      /* Info strip stack */
+      .info-strip__grid { grid-template-columns: 1fr; gap: 1.5rem; }
+
+      /* Review cards */
+      .review-card { padding: 1.5rem; }
+
+      /* FAB labels hide on very small to avoid overflow */
+      .fab__label { display: none; }
+
+      /* Menu tabs scroll */
+      .menu__tabs { flex-wrap: nowrap; overflow-x: auto; justify-content: flex-start; padding-bottom: 0.5rem; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+      .menu__tabs::-webkit-scrollbar { display: none; }
+      .menu__tab { flex-shrink: 0; }
+
+      /* About badge */
+      .about__badge { right: 0; top: 1rem; width: 76px; height: 76px; }
+      .about__img-accent { width: 130px; bottom: -1.5rem; left: -1rem; }
+
+      /* CTA */
+      .cta__actions { flex-direction: column; align-items: center; }
+      .cta__phone { font-size: var(--text-base); }
+    }
+
+    @media (max-width: 768px) and (min-width: 481px) {
+      /* Hero stats row — reduce spacing */
+      .hero__stats-inner { gap: 1rem; }
+      .hero__stat-value { font-size: var(--text-xl); }
+
+      /* Gallery — 2 cols */
+      .gallery { grid-template-rows: repeat(3, 200px); }
+
+      /* Info strip */
+      .info-strip__grid { grid-template-columns: 1fr 1fr; }
+
+      /* Menu tabs wrap */
+      .menu__tabs { gap: 0.4rem; }
+    }
+
+    /* Ensure dish card images fill height properly on all sizes */
+    .dish-card__img img,
+    .dish-card__img-placeholder {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .dish-card__img img { object-fit: cover; }
+    .dish-card__img { position: relative; }
+
+    /* Fix about accent image overflow on mobile */
+    @media (max-width: 768px) {
+      .about__visual { padding-bottom: 3rem; }
+    }
+
+    /* Hero scroll indicator — hide on mobile */
+    @media (max-width: 768px) {
+      .hero__scroll { display: none; }
+    }
+
+    /* ─── SCROLL ANIMATIONS ─── */
+    [data-animate] { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    [data-animate].is-visible { opacity: 1; transform: translateY(0); }
+    [data-animate-delay="1"] { transition-delay: 80ms; }
+    [data-animate-delay="2"] { transition-delay: 160ms; }
+    [data-animate-delay="3"] { transition-delay: 240ms; }
+    [data-animate-delay="4"] { transition-delay: 320ms; }
+    [data-animate-delay="5"] { transition-delay: 400ms; }
+    [data-animate-delay="6"] { transition-delay: 480ms; }
+
+    /* ─── FAB ─── */
+    .fab { position:fixed; bottom:2rem; right:2rem; z-index:200; display:flex; flex-direction:column; align-items:flex-end; gap:0.75rem; }
+    .fab__main { width:58px; height:58px; background:var(--red); border-radius:50%; border:none; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 20px rgba(139,26,26,0.5); transition:all 0.3s ease; color:white; }
+    .fab__main:hover { transform:scale(1.08); background:var(--red-light); }
+    .fab__main.is-open { background:#333; transform:rotate(45deg); }
+    .fab__actions { display:flex; flex-direction:column; align-items:flex-end; gap:0.75rem; transition:all 0.3s ease; }
+    .fab__actions.is-hidden { opacity:0; pointer-events:none; transform:translateY(10px); }
+    .fab__action { display:flex; align-items:center; gap:0.75rem; }
+    .fab__action-btn { width:50px; height:50px; border-radius:50%; border:none; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 16px rgba(0,0,0,0.25); transition:all 0.25s ease; color:white; text-decoration:none; }
+    .fab__action-btn:hover { transform:scale(1.1); }
+    .fab__action-btn--whatsapp { background:#25D366; }
+    .fab__action-btn--call { background:var(--red); }
+    .fab__label { background:rgba(26,18,8,0.85); color:white; padding:0.4rem 0.85rem; border-radius:100px; font-size:0.75rem; font-weight:500; font-family:'DM Sans',sans-serif; white-space:nowrap; backdrop-filter:blur(8px); }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- ─── NAV ─── -->
+<nav class="nav" id="nav" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo" aria-label="Goc Vietnam Restaurant home">
+        <span class="nav__logo-text">Góc Việt Nam</span>
+        <span class="nav__logo-sub">Restaurant · Plano, TX</span>
+      </a>
+      <ul class="nav__links" id="navLinks" role="list">
+        <li><a href="#about" class="nav__link">Our Story</a></li>
+        <li><a href="#menu" class="nav__link">Menu</a></li>
+        <li><a href="#reviews" class="nav__link">Reviews</a></li>
+        <li><a href="#hours" class="nav__link">Visit Us</a></li>
+        <li><a href="tel:+19458673637" class="btn btn--primary nav__cta">Order Now</a></li>
+      </ul>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="hero__bg"></div>
+  <div class="hero__pattern"></div>
+  <svg class="hero__deco" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+    <circle cx="100" cy="100" r="90" stroke="white" stroke-width="0.5"/>
+    <circle cx="100" cy="100" r="70" stroke="white" stroke-width="0.5"/>
+    <circle cx="100" cy="100" r="50" stroke="white" stroke-width="0.5"/>
+    <path d="M100 10 C100 10 120 50 100 100 C80 50 100 10 100 10Z" fill="white" opacity="0.6"/>
+    <path d="M100 10 C100 10 120 50 100 100 C80 50 100 10 100 10Z" fill="white" opacity="0.6" transform="rotate(45 100 100)"/>
+    <path d="M100 10 C100 10 120 50 100 100 C80 50 100 10 100 10Z" fill="white" opacity="0.6" transform="rotate(90 100 100)"/>
+    <path d="M100 10 C100 10 120 50 100 100 C80 50 100 10 100 10Z" fill="white" opacity="0.6" transform="rotate(135 100 100)"/>
+    <path d="M100 10 C100 10 120 50 100 100 C80 50 100 10 100 10Z" fill="white" opacity="0.6" transform="rotate(180 100 100)"/>
+    <path d="M100 10 C100 10 120 50 100 100 C80 50 100 10 100 10Z" fill="white" opacity="0.6" transform="rotate(225 100 100)"/>
+    <path d="M100 10 C100 10 120 50 100 100 C80 50 100 10 100 10Z" fill="white" opacity="0.6" transform="rotate(270 100 100)"/>
+    <path d="M100 10 C100 10 120 50 100 100 C80 50 100 10 100 10Z" fill="white" opacity="0.6" transform="rotate(315 100 100)"/>
+    <circle cx="100" cy="100" r="12" fill="white" opacity="0.8"/>
+  </svg>
+
+  <main id="main-content">
+    <div class="container">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Authentic Vietnamese Cuisine · Plano, TX</p>
+        <h1 id="hero-heading" class="hero__title">
+          A taste of <em>Vietnam</em><br>in the heart of Plano
+        </h1>
+        <p class="hero__subtitle">
+          Family-owned. Soul-cooked. From our legendary Banh Xeo to our slow-simmered Pho — every dish carries the warmth of home.
+        </p>
+        <div class="hero__actions">
+          <a href="#menu" class="btn btn--primary">Explore Our Menu</a>
+          <a href="#hours" class="btn btn--outline">Find Us</a>
+          <span class="hero__badge">
+            <span class="hero__badge-icon">★</span>
+            4.1 · 32 Reviews on Yelp
+          </span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="hero__stats">
+    <div class="container">
+      <div class="hero__stats-inner">
+        <div class="hero__stat">
+          <div class="hero__stat-value" data-count="4.1" data-suffix="★" data-decimals="1">4.1★</div>
+          <div class="hero__stat-label">Yelp Rating</div>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <div class="hero__stat-value" data-count="96" data-suffix="" data-decimals="0">96</div>
+          <div class="hero__stat-label">Health Score</div>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <div class="hero__stat-value" data-count="32" data-suffix="" data-decimals="0">32</div>
+          <div class="hero__stat-label">Happy Reviews</div>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <div class="hero__stat-value" data-count="100" data-suffix="%" data-decimals="0">100%</div>
+          <div class="hero__stat-label">Authentic</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__scroll" aria-hidden="true">Scroll</div>
+</section>
+
+<!-- ─── RIBBON ─── -->
+<div class="ribbon" aria-hidden="true">
+  <div class="ribbon__track">
+    <span class="ribbon__item"><span class="ribbon__dot"></span> Banh Xeo</span>
+    <span class="ribbon__item"><span class="ribbon__dot"></span> Authentic Pho</span>
+    <span class="ribbon__item"><span class="ribbon__dot"></span> Hu Tieu</span>
+    <span class="ribbon__item"><span class="ribbon__dot"></span> Bun Bo Hue</span>
+    <span class="ribbon__item"><span class="ribbon__dot"></span> Goi Cuon</span>
+    <span class="ribbon__item"><span class="ribbon__dot"></span> Bo Luc Lac</span>
+    <span class="ribbon__item"><span class="ribbon__dot"></span> Banh Mi</span>
+    <span class="ribbon__item"><span class="ribbon__dot"></span> Egg Rolls</span>
+    <span class="ribbon__item"><span class="ribbon__dot"></span> Com Tam</span>
+    <span class="ribbon__item"><span class="ribbon__dot"></span> Vietnamese Coffee</span>
+    <span class="ribbon__item"><span class="ribbon__dot"></span> Banh Xeo</span>
+    <span class="ribbon__item"><span class="ribbon__dot"></span> Authentic Pho</span>
+    <span class="ribbon__item"><span class="ribbon__dot"></span> Hu Tieu</span>
+    <span class="ribbon__item"><span class="ribbon__dot"></span> Bun Bo Hue</span>
+    <span class="ribbon__item"><span class="ribbon__dot"></span> Goi Cuon</span>
+    <span class="ribbon__item"><span class="ribbon__dot"></span> Bo Luc Lac</span>
+    <span class="ribbon__item"><span class="ribbon__dot"></span> Banh Mi</span>
+    <span class="ribbon__item"><span class="ribbon__dot"></span> Egg Rolls</span>
+    <span class="ribbon__item"><span class="ribbon__dot"></span> Com Tam</span>
+    <span class="ribbon__item"><span class="ribbon__dot"></span> Vietnamese Coffee</span>
+  </div>
+</div>
+
+<!-- ─── GALLERY ─── -->
+<div class="gallery" aria-label="Restaurant photos">
+  <div class="gallery__item">
+    <img src="assets/images/owners.webp" alt="The owners of Goc Vietnam Restaurant" width="600" height="560" loading="lazy" decoding="async">
+  </div>
+  <div class="gallery__item">
+    <img src="assets/images/exterior.jpg" alt="Goc Vietnam Restaurant exterior in Plano, TX" width="400" height="280" loading="lazy" decoding="async">
+  </div>
+  <div class="gallery__item">
+    <img src="assets/images/dish-pho.webp" alt="Beef Pho bowl" width="400" height="280" loading="lazy" decoding="async">
+  </div>
+  <div class="gallery__item">
+    <img src="assets/images/interior.webp" alt="Restaurant interior with colorful lanterns" width="400" height="280" loading="lazy" decoding="async">
+  </div>
+  <div class="gallery__item">
+    <img src="assets/images/dish-bo-ne.jpg" alt="Vietnamese sizzling steak Bo Ne" width="400" height="280" loading="lazy" decoding="async">
+  </div>
+  <div class="gallery__item">
+    <img src="assets/images/dish-luc-lac.jpg" alt="Bo Luc Lac shaking beef with fried rice" width="400" height="280" loading="lazy" decoding="async">
+  </div>
+</div>
+
+<!-- ─── ABOUT ─── -->
+<section class="about" id="about" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="about__grid">
+
+      <div class="about__visual" data-animate>
+        <div class="about__img-main">
+          <img
+            src="assets/images/owners.webp"
+            alt="The owners of Goc Vietnam Restaurant smiling at the counter"
+            width="560"
+            height="700"
+            loading="lazy"
+            decoding="async"
+          >
+        </div>
+        <div class="about__badge">
+          <span class="about__badge-num">96</span>
+          <span class="about__badge-txt">Health Score</span>
+        </div>
+        <div class="about__img-accent">
+          <img
+            src="assets/images/interior.webp"
+            alt="Restaurant interior with lanterns"
+            width="170"
+            height="170"
+            loading="lazy"
+            decoding="async"
+          >
+        </div>
+      </div>
+
+      <div class="about__text" data-animate data-animate-delay="2">
+        <p class="section-eyebrow">Our Story</p>
+        <h2 id="about-heading">Where <em>every bowl</em> tells a story</h2>
+        <p>
+          Nestled in a cozy strip mall at Legacy Drive, Goc Vietnam Restaurant is a labor of love — a family-run kitchen bringing the honest, soul-warming flavors of Vietnamese home cooking to Plano, TX.
+        </p>
+        <p>
+          "Góc" means <em>corner</em> in Vietnamese — a humble word for a humble place. But our corners overflow with flavor. From our legendary crispy Banh Xeo packed with shrimp and calamari, to our slow-simmered broths, everything is made with intention and heart.
+        </p>
+        <div class="about__features">
+          <div class="about__feature">
+            <div class="about__feature-icon">🍜</div>
+            <div>
+              <div class="about__feature-label">Authentic Recipes</div>
+              <div class="about__feature-text">Rooted in Vietnamese tradition</div>
+            </div>
+          </div>
+          <div class="about__feature">
+            <div class="about__feature-icon">🏠</div>
+            <div>
+              <div class="about__feature-label">Family Owned</div>
+              <div class="about__feature-text">Mom &amp; pop warmth in every visit</div>
+            </div>
+          </div>
+          <div class="about__feature">
+            <div class="about__feature-icon">🥗</div>
+            <div>
+              <div class="about__feature-label">Fresh Ingredients</div>
+              <div class="about__feature-text">Made-to-order, never pre-packaged</div>
+            </div>
+          </div>
+          <div class="about__feature">
+            <div class="about__feature-icon">♿</div>
+            <div>
+              <div class="about__feature-label">Fully Accessible</div>
+              <div class="about__feature-text">Wheelchair accessible, takeout &amp; delivery</div>
+            </div>
+          </div>
+        </div>
+        <a href="#menu" class="btn btn--primary">See Our Menu</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── MENU ─── -->
+<section class="menu" id="menu" aria-labelledby="menu-heading">
+  <div class="container">
+    <header class="menu__header" data-animate>
+      <p class="section-eyebrow">What We Serve</p>
+      <h2 class="menu__title" id="menu-heading">Popular Dishes</h2>
+      <p class="menu__subtitle">From hearty noodle soups to crispy bites — flavors that keep our guests coming back.</p>
+    </header>
+
+    <!-- Filter Tabs -->
+    <div class="menu__tabs" role="tablist" aria-label="Filter menu by category">
+      <button class="menu__tab is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+      <button class="menu__tab" data-filter="soups" role="tab" aria-selected="false">Noodle Soups</button>
+      <button class="menu__tab" data-filter="mains" role="tab" aria-selected="false">Rice &amp; Mains</button>
+      <button class="menu__tab" data-filter="starters" role="tab" aria-selected="false">Starters</button>
+    </div>
+
+    <div class="menu__grid">
+
+      <!-- PHO — real photo -->
+      <article class="dish-card" data-category="soups" data-animate data-animate-delay="1">
+        <div class="dish-card__img">
+          <img src="assets/images/dish-pho.webp" alt="Beef Pho in a red bowl" width="400" height="250" loading="lazy" decoding="async">
+          <span class="dish-card__badge">Crowd Favorite</span>
+        </div>
+        <div class="dish-card__body">
+          <h3 class="dish-card__name">Beef Pho</h3>
+          <p class="dish-card__viet">Phở Bò</p>
+          <p class="dish-card__desc">Slow-simmered bone broth with rice noodles, rare beef, tendon, and tripe. Served with fresh bean sprouts, basil, lime, and jalapeño. Generous portions.</p>
+          <div class="dish-card__footer">
+            <div class="dish-card__reviews">
+              <span class="dish-card__stars">★★★★★</span>
+              <span>5 reviews</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- BO NE — real photo -->
+      <article class="dish-card" data-category="mains" data-animate data-animate-delay="2">
+        <div class="dish-card__img">
+          <img src="assets/images/dish-bo-ne.jpg" alt="Vietnamese sizzling steak Bo Ne" width="400" height="250" loading="lazy" decoding="async">
+        </div>
+        <div class="dish-card__body">
+          <h3 class="dish-card__name">Vietnamese Sizzling Steak</h3>
+          <p class="dish-card__viet">Bò Né</p>
+          <p class="dish-card__desc">Sizzling hot plate with steak, egg, and pâté. A Vietnamese classic served with freshly baked baguette. Available all day.</p>
+          <div class="dish-card__footer">
+            <div class="dish-card__reviews">
+              <span class="dish-card__stars">★★★★★</span>
+              <span>1 review</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- COM TAM — real photo -->
+      <article class="dish-card" data-category="mains" data-animate data-animate-delay="3">
+        <div class="dish-card__img">
+          <img src="assets/images/dish-com-tam.webp" alt="Vietnamese broken rice plate Com Tam" width="400" height="250" loading="lazy" decoding="async">
+          <span class="dish-card__badge">Chef's Pick</span>
+        </div>
+        <div class="dish-card__body">
+          <h3 class="dish-card__name">Broken Rice Plate</h3>
+          <p class="dish-card__viet">Cơm Tấm</p>
+          <p class="dish-card__desc">Vietnamese broken rice with grilled pork chop, steamed egg meatloaf (chả), crispy fried egg, pickled daikon, and dipping fish sauce.</p>
+          <div class="dish-card__footer">
+            <div class="dish-card__reviews">
+              <span class="dish-card__stars">★★★★★</span>
+              <span>3 reviews</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- BANH MI — real photo -->
+      <article class="dish-card" data-category="mains" data-animate data-animate-delay="4">
+        <div class="dish-card__img">
+          <img src="assets/images/dish-banh-mi.jpg" alt="Vietnamese grilled chicken banh mi sandwich" width="400" height="250" loading="lazy" decoding="async">
+        </div>
+        <div class="dish-card__body">
+          <h3 class="dish-card__name">Grilled Chicken Sandwich</h3>
+          <p class="dish-card__viet">Bánh Mì Gà Nướng</p>
+          <p class="dish-card__desc">Crusty Vietnamese baguette with marinated grilled chicken, pickled daikon, cilantro, jalapeño, and house sauce. <em style="color:rgba(200,151,58,0.8)">"Great bread!"</em></p>
+          <div class="dish-card__footer">
+            <div class="dish-card__reviews">
+              <span class="dish-card__stars">★★★★☆</span>
+              <span>4 reviews</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- CHICKEN — real photo -->
+      <article class="dish-card" data-category="mains" data-animate data-animate-delay="5">
+        <div class="dish-card__img">
+          <img src="assets/images/dish-chicken.webp" alt="Roasted Vietnamese chicken" width="400" height="250" loading="lazy" decoding="async">
+        </div>
+        <div class="dish-card__body">
+          <h3 class="dish-card__name">Roasted Chicken</h3>
+          <p class="dish-card__viet">Gà Quay</p>
+          <p class="dish-card__desc">House-roasted chicken with a golden, crispy skin and tender, flavorful meat. Slow-prepared daily in small batches using traditional Vietnamese seasoning.</p>
+          <div class="dish-card__footer">
+            <div class="dish-card__reviews">
+              <span class="dish-card__stars">★★★★★</span>
+              <span>2 reviews</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- BUN BO HUE — real photo -->
+      <article class="dish-card" data-category="soups" data-animate data-animate-delay="6">
+        <div class="dish-card__img">
+          <img src="assets/images/dish-bun-bo-hue.jpg" alt="Bun Bo Hue spicy beef noodle soup" width="400" height="250" loading="lazy" decoding="async">
+        </div>
+        <div class="dish-card__body">
+          <h3 class="dish-card__name">Spicy Beef Noodle Soup</h3>
+          <p class="dish-card__viet">Bún Bò Huế</p>
+          <p class="dish-card__desc">Thick rice noodles in a bold, lemongrass-infused spicy broth with beef and pork. Comes in a HUGE bowl — come hungry.</p>
+          <div class="dish-card__footer">
+            <div class="dish-card__reviews">
+              <span class="dish-card__stars">★★★★★</span>
+              <span>4 reviews</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- BANH XEO — real photo -->
+      <article class="dish-card" data-category="starters" data-animate data-animate-delay="1">
+        <div class="dish-card__img">
+          <img src="assets/images/dish-banh-xeo.jpg" alt="Banh Xeo Vietnamese sizzling crepe" width="400" height="250" loading="lazy" decoding="async">
+          <span class="dish-card__badge">Best Seller</span>
+        </div>
+        <div class="dish-card__body">
+          <h3 class="dish-card__name">Vietnamese Sizzling Crepe</h3>
+          <p class="dish-card__viet">Bánh Xèo</p>
+          <p class="dish-card__desc">Crispy, golden crepe filled with shrimp, calamari, and bean sprouts. Served with fresh herbs and dipping sauce. <em style="color:rgba(200,151,58,0.8)">"The best in the metroplex."</em></p>
+          <div class="dish-card__footer">
+            <div class="dish-card__reviews">
+              <span class="dish-card__stars">★★★★★</span>
+              <span>6 reviews</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- GOI CUON — real photo -->
+      <article class="dish-card" data-category="starters" data-animate data-animate-delay="2">
+        <div class="dish-card__img">
+          <img src="assets/images/dish-goi-cuon.jpg" alt="Goi Cuon fresh spring rolls with peanut sauce" width="400" height="250" loading="lazy" decoding="async">
+        </div>
+        <div class="dish-card__body">
+          <h3 class="dish-card__name">Fresh Spring Rolls</h3>
+          <p class="dish-card__viet">Gỏi Cuốn</p>
+          <p class="dish-card__desc">Translucent rice paper rolls filled with shrimp, pork, vermicelli, mint, and basil. Served with house-made peanut sauce. 2 for $5.</p>
+          <div class="dish-card__footer">
+            <div class="dish-card__reviews">
+              <span class="dish-card__stars">★★★★★</span>
+              <span>4 reviews</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- LUC LAC — real photo -->
+      <article class="dish-card" data-category="mains" data-animate data-animate-delay="4">
+        <div class="dish-card__img">
+          <img src="assets/images/dish-luc-lac.jpg" alt="Bo Luc Lac shaking beef with fried rice" width="400" height="250" loading="lazy" decoding="async">
+        </div>
+        <div class="dish-card__body">
+          <h3 class="dish-card__name">Shaking Beef & Fried Rice</h3>
+          <p class="dish-card__viet">Bò Lúc Lắc</p>
+          <p class="dish-card__desc">Tender wok-seared cubed beef with garlic butter, bell peppers, and onions. Served alongside fragrant Vietnamese fried rice. A crowd-pleasing combo.</p>
+          <div class="dish-card__footer">
+            <div class="dish-card__reviews">
+              <span class="dish-card__stars">★★★★★</span>
+              <span>3 reviews</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── REVIEWS ─── -->
+<section class="reviews" id="reviews" aria-labelledby="reviews-heading">
+  <div class="container">
+    <header class="reviews__header" data-animate>
+      <p class="section-eyebrow">Guest Experiences</p>
+      <h2 class="reviews__title" id="reviews-heading">What Our Guests Say</h2>
+      <div class="reviews__meta">
+        <div class="reviews__score">
+          <span class="reviews__score-num">4.1</span>
+          <span class="reviews__stars">★★★★</span>
+        </div>
+        <span class="reviews__count">32 reviews on Yelp · Verified 2 months ago</span>
+      </div>
+    </header>
+
+    <div class="reviews__grid">
+
+      <article class="review-card" data-animate data-animate-delay="1">
+        <span class="review-card__quote">"</span>
+        <div class="review-card__stars">★★★★★</div>
+        <p class="review-card__text">For my birthday, my daughter took me here. I have tried Banh Xeo in many restaurants in the metroplex, but <span class="review-card__highlight">this was the best!</span> It was crispy without being greasy. Full of shrimp and calamari. Lots of fresh vegetables.</p>
+        <footer class="review-card__footer">
+          <div class="review-card__avatar" style="background:linear-gradient(135deg,#E8732A,#C84A20)">J</div>
+          <div>
+            <div class="review-card__name">Jana B.</div>
+            <div class="review-card__date">June 1, 2026</div>
+          </div>
+          <span class="review-card__badge">Elite '26</span>
+        </footer>
+      </article>
+
+      <article class="review-card" data-animate data-animate-delay="2">
+        <span class="review-card__quote">"</span>
+        <div class="review-card__stars">★★★★★</div>
+        <p class="review-card__text">Delicious Vietnamese food in NTX where you don't have to drive to Garland or Arlington. <span class="review-card__highlight">Portions are very generous.</span> Pho, dry hu tieu and duck noodle soup — all were delicious. The owners are very sweet and friendly.</p>
+        <footer class="review-card__footer">
+          <div class="review-card__avatar" style="background:linear-gradient(135deg,#2A8B3A,#1A6B2A)">J</div>
+          <div>
+            <div class="review-card__name">Joy M.</div>
+            <div class="review-card__date">January 8, 2026</div>
+          </div>
+          <span class="review-card__badge">Elite '26</span>
+        </footer>
+      </article>
+
+      <article class="review-card" data-animate data-animate-delay="3">
+        <span class="review-card__quote">"</span>
+        <div class="review-card__stars">★★★★★</div>
+        <p class="review-card__text">Hold the pho! This place rocks. I got the pho with rare steak and tendon. <span class="review-card__highlight">Huge pieces of tendon. Broth was flavorful and not too salty.</span> The hubs got the Bun Bo Hue and said it was his new favorite. We'll be back!</p>
+        <footer class="review-card__footer">
+          <div class="review-card__avatar" style="background:linear-gradient(135deg,#8B2A8B,#5A1A5A)">E</div>
+          <div>
+            <div class="review-card__name">Elaine M.</div>
+            <div class="review-card__date">May 10, 2025</div>
+          </div>
+          <span class="review-card__badge">Elite '26</span>
+        </footer>
+      </article>
+
+      <article class="review-card" data-animate data-animate-delay="4">
+        <span class="review-card__quote">"</span>
+        <div class="review-card__stars">★★★★★</div>
+        <p class="review-card__text">Spring rolls came with both pork and shrimp — <span class="review-card__highlight">the peanut sauce was delicious.</span> We had never tried banh xeo before and loved it! Huge and came with tons of fresh herbs. We're looking forward to coming back.</p>
+        <footer class="review-card__footer">
+          <div class="review-card__avatar" style="background:linear-gradient(135deg,#2A5A8B,#1A3A6B)">L</div>
+          <div>
+            <div class="review-card__name">Lucy M.</div>
+            <div class="review-card__date">July 5, 2025</div>
+          </div>
+          <span class="review-card__badge">Elite '26</span>
+        </footer>
+      </article>
+
+      <article class="review-card" data-animate data-animate-delay="5">
+        <span class="review-card__quote">"</span>
+        <div class="review-card__stars">★★★★★</div>
+        <p class="review-card__text">Was looking for something quick and glad we found this place. <span class="review-card__highlight">By far my favorite Viet place.</span> They have the best homemade sauté, pickled garlic and jalapeño. Small, clean, friendly with quick service. Will definitely come back.</p>
+        <footer class="review-card__footer">
+          <div class="review-card__avatar" style="background:linear-gradient(135deg,#C87A2A,#A05A10)">L</div>
+          <div>
+            <div class="review-card__name">Lyssa T.</div>
+            <div class="review-card__date">May 16, 2026</div>
+          </div>
+          <span class="review-card__badge">Local Guide</span>
+        </footer>
+      </article>
+
+      <article class="review-card" data-animate data-animate-delay="6">
+        <span class="review-card__quote">"</span>
+        <div class="review-card__stars">★★★★★</div>
+        <p class="review-card__text">Crispy Salted Shrimp — 6 huge, crispy, buttery shrimps. <span class="review-card__highlight">This is potentially one of my favorites.</span> For someone who usually drives to Garland, I was very surprised to find authentic Vietnamese right here in Plano.</p>
+        <footer class="review-card__footer">
+          <div class="review-card__avatar" style="background:linear-gradient(135deg,#8B2A2A,#6B1A1A)">U</div>
+          <div>
+            <div class="review-card__name">Uyen L.</div>
+            <div class="review-card__date">May 29, 2025</div>
+          </div>
+          <span class="review-card__badge">Elite '26</span>
+        </footer>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── INFO STRIP ─── -->
+<div class="info-strip">
+  <div class="container">
+    <div class="info-strip__grid">
+      <div class="info-item">
+        <div class="info-item__icon">📍</div>
+        <div>
+          <div class="info-item__label">Address</div>
+          <div class="info-item__value">109 Legacy Dr, Ste 160<br>Plano, TX 75023</div>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-item__icon">📞</div>
+        <div>
+          <div class="info-item__label">Phone</div>
+          <div class="info-item__value"><a href="tel:+19458673637">(945) 867-3637</a></div>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-item__icon">🕐</div>
+        <div>
+          <div class="info-item__label">Hours Today</div>
+          <div class="info-item__value" id="todayHours">Loading…</div>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-item__icon">🚗</div>
+        <div>
+          <div class="info-item__label">Services</div>
+          <div class="info-item__value">Dine-in · Takeout · Delivery</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── HOURS ─── -->
+<section class="hours" id="hours" aria-labelledby="hours-heading">
+  <div class="container">
+    <div class="hours__grid">
+      <div>
+        <p class="section-eyebrow">Find Us</p>
+        <h2 class="hours__title" id="hours-heading">Hours &amp; Location</h2>
+        <p class="hours__subtitle">We're on Legacy Drive at US-75. Plenty of parking, wheelchair accessible, and always welcoming.</p>
+
+        <div class="hours__table" role="table" aria-label="Opening hours">
+          <div class="hours__row" id="row-mon">
+            <span class="hours__day">Monday</span>
+            <span class="hours__closed">Closed</span>
+          </div>
+          <div class="hours__row" id="row-tue">
+            <span class="hours__day">Tuesday</span>
+            <span class="hours__time">9:30 AM – 8:30 PM</span>
+          </div>
+          <div class="hours__row" id="row-wed">
+            <span class="hours__day">Wednesday</span>
+            <span class="hours__time">9:30 AM – 8:30 PM</span>
+          </div>
+          <div class="hours__row" id="row-thu">
+            <span class="hours__day">Thursday</span>
+            <span class="hours__time">9:30 AM – 8:30 PM</span>
+          </div>
+          <div class="hours__row" id="row-fri">
+            <span class="hours__day">Friday</span>
+            <span class="hours__time">9:30 AM – 8:30 PM</span>
+          </div>
+          <div class="hours__row" id="row-sat">
+            <span class="hours__day">Saturday</span>
+            <span class="hours__time">9:30 AM – 8:30 PM</span>
+          </div>
+          <div class="hours__row" id="row-sun">
+            <span class="hours__day">Sunday</span>
+            <span class="hours__time">9:30 AM – 7:00 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hours__visual" data-animate>
+        <div class="hours__map-embed">
+          <iframe
+            src="https://www.google.com/maps?q=109+Legacy+Dr+Ste+160,+Plano,+TX+75023&output=embed"
+            width="100%"
+            height="380"
+            style="border:0; border-radius:16px; display:block;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Goc Vietnam Restaurant location on Google Maps"
+          ></iframe>
+        </div>
+        <a href="https://maps.google.com/?q=109+Legacy+Dr+Ste+160+Plano+TX+75023" target="_blank" rel="noopener" class="hours__map-link-btn">
+          📍 Get Directions on Google Maps
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA ─── -->
+<section class="cta" aria-labelledby="cta-heading">
+  <div class="container">
+    <div class="cta__content" data-animate>
+      <p class="section-eyebrow" style="justify-content:center">
+        <span style="display:inline-flex;align-items:center;gap:.75rem">
+          <span style="display:block;width:28px;height:1px;background:var(--gold)"></span>
+          Come Visit Us
+          <span style="display:block;width:28px;height:1px;background:var(--gold)"></span>
+        </span>
+      </p>
+      <h2 class="cta__title" id="cta-heading">
+        Ready for <em>authentic</em> Vietnamese food?
+      </h2>
+      <p class="cta__text">Dine in, take out, or get it delivered. We're open Tue – Sun.</p>
+      <div class="cta__actions">
+        <a href="https://maps.google.com/?q=109+Legacy+Dr+Ste+160+Plano+TX+75023" target="_blank" rel="noopener" class="btn btn--primary">Get Directions</a>
+        <a href="tel:+19458673637" class="btn btn--outline">Call to Order</a>
+      </div>
+      <a href="tel:+19458673637" class="cta__phone">📞 (945) 867-3637</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand-name">Góc Việt Nam</div>
+        <div class="footer__brand-tagline">Authentic Vietnamese · Plano, TX</div>
+        <p class="footer__brand-desc">A family-owned corner of Vietnam in the heart of Plano. Every bowl, every bite — made with heart.</p>
+      </div>
+      <div>
+        <div class="footer__col-title">Navigate</div>
+        <ul class="footer__links" role="list">
+          <li><a href="#about" class="footer__link">Our Story</a></li>
+          <li><a href="#menu" class="footer__link">Menu</a></li>
+          <li><a href="#reviews" class="footer__link">Reviews</a></li>
+          <li><a href="#hours" class="footer__link">Hours &amp; Location</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Visit Us</div>
+        <ul class="footer__links" role="list">
+          <li><a href="https://maps.google.com/?q=109+Legacy+Dr+Ste+160+Plano+TX+75023" target="_blank" rel="noopener" class="footer__link">109 Legacy Dr, Ste 160</a></li>
+          <li><span class="footer__link">Plano, TX 75023</span></li>
+          <li><a href="tel:+19458673637" class="footer__link">(945) 867-3637</a></li>
+          <li><span class="footer__link">Tue – Fri: 9:30 AM – 8:30 PM</span></li>
+          <li><span class="footer__link">Sat: 9:30 AM – 8:30 PM</span></li>
+          <li><span class="footer__link">Sun: 9:30 AM – 7:00 PM</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2026 Goc Vietnam Restaurant · All rights reserved</p>
+      <div class="footer__health">Health Score: <span class="footer__health-score">96/100</span> · Powered by Health Dept. Intelligence</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ─── LIGHTBOX ─── -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lightbox__close" id="lightboxClose" aria-label="Close image viewer">×</button>
+  <button class="lightbox__prev" id="lightboxPrev" aria-label="Previous image">&#8249;</button>
+  <img class="lightbox__img" id="lightboxImg" src="" alt="">
+  <button class="lightbox__next" id="lightboxNext" aria-label="Next image">&#8250;</button>
+  <div class="lightbox__counter" id="lightboxCounter"></div>
+</div>
+
+<!-- ─── FLOATING ACTION BUTTON ─── -->
+<div class="fab" role="complementary" aria-label="Quick contact">
+  <div class="fab__actions is-hidden" id="fabActions">
+    <div class="fab__action">
+      <span class="fab__label">WhatsApp</span>
+      <a href="https://wa.me/19458673637" target="_blank" rel="noopener" class="fab__action-btn fab__action-btn--whatsapp" aria-label="Contact on WhatsApp">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </a>
+    </div>
+    <div class="fab__action">
+      <span class="fab__label">Call Us</span>
+      <a href="tel:+19458673637" class="fab__action-btn fab__action-btn--call" aria-label="Call the restaurant">
+        <svg width="22" height="22" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" fill="currentColor"/></svg>
+      </a>
+    </div>
+  </div>
+  <button class="fab__main" id="fabToggle" aria-label="Toggle contact options" aria-expanded="false">
+    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+  </button>
+</div>
+
+<script>
+  // ─── NAV SCROLL ───
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  // ─── MOBILE NAV ───
+  const toggle = document.getElementById('navToggle');
+  const links  = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('is-open');
+    toggle.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+  links.querySelectorAll('.nav__link').forEach(link => {
+    link.addEventListener('click', () => {
+      links.classList.remove('is-open');
+      toggle.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // ─── SCROLL ANIMATIONS ───
+  const scrollObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          scrollObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+  );
+  document.querySelectorAll('[data-animate]').forEach(el => scrollObserver.observe(el));
+
+  // ─── TODAY'S HOURS ───
+  const hoursMap = {
+    0: { text: '9:30 AM – 7:00 PM', rowId: 'row-sun' },
+    1: { text: 'Closed today',      rowId: 'row-mon' },
+    2: { text: '9:30 AM – 8:30 PM', rowId: 'row-tue' },
+    3: { text: '9:30 AM – 8:30 PM', rowId: 'row-wed' },
+    4: { text: '9:30 AM – 8:30 PM', rowId: 'row-thu' },
+    5: { text: '9:30 AM – 8:30 PM', rowId: 'row-fri' },
+    6: { text: '9:30 AM – 8:30 PM', rowId: 'row-sat' },
+  };
+  const today = new Date().getDay();
+  const info  = hoursMap[today];
+  document.getElementById('todayHours').textContent = info.text;
+  const todayRow = document.getElementById(info.rowId);
+  if (todayRow) {
+    todayRow.classList.add('today');
+    const tag = document.createElement('span');
+    tag.className = 'hours__tag';
+    tag.textContent = 'Today';
+    todayRow.appendChild(tag);
+  }
+
+  // ─── HERO COUNTER ANIMATION ───
+  function animateCounter(el) {
+    const target   = parseFloat(el.dataset.count);
+    const suffix   = el.dataset.suffix   || '';
+    const decimals = parseInt(el.dataset.decimals, 10) || 0;
+    const duration = 2000;
+    const start    = performance.now();
+
+    function easeOut(t) {
+      return 1 - Math.pow(1 - t, 3);
+    }
+
+    function step(now) {
+      const elapsed  = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const value    = target * easeOut(progress);
+      el.textContent = value.toFixed(decimals) + suffix;
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        el.textContent = target.toFixed(decimals) + suffix;
+      }
+    }
+
+    requestAnimationFrame(step);
+  }
+
+  // Start counters 1.5s after page load
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.querySelectorAll('.hero__stat-value[data-count]').forEach(animateCounter);
+    }, 1500);
+  });
+
+  // ─── GALLERY LIGHTBOX ───
+  const galleryImages = Array.from(document.querySelectorAll('.gallery__item img'));
+  const lightbox      = document.getElementById('lightbox');
+  const lightboxImg   = document.getElementById('lightboxImg');
+  const lightboxClose = document.getElementById('lightboxClose');
+  const lightboxPrev  = document.getElementById('lightboxPrev');
+  const lightboxNext  = document.getElementById('lightboxNext');
+  const lightboxCounter = document.getElementById('lightboxCounter');
+  let currentLightboxIndex = 0;
+
+  function openLightbox(index) {
+    currentLightboxIndex = index;
+    const img = galleryImages[index];
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightboxCounter.textContent = (index + 1) + ' / ' + galleryImages.length;
+    lightbox.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    lightboxClose.focus();
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+
+  function showPrev() {
+    currentLightboxIndex = (currentLightboxIndex - 1 + galleryImages.length) % galleryImages.length;
+    openLightbox(currentLightboxIndex);
+  }
+
+  function showNext() {
+    currentLightboxIndex = (currentLightboxIndex + 1) % galleryImages.length;
+    openLightbox(currentLightboxIndex);
+  }
+
+  document.querySelectorAll('.gallery__item').forEach((item, index) => {
+    item.addEventListener('click', () => openLightbox(index));
+  });
+
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightboxPrev.addEventListener('click', showPrev);
+  lightboxNext.addEventListener('click', showNext);
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('is-open')) return;
+    if (e.key === 'Escape')     closeLightbox();
+    if (e.key === 'ArrowLeft')  showPrev();
+    if (e.key === 'ArrowRight') showNext();
+  });
+
+  // ─── MENU CATEGORY FILTERS ───
+  const menuTabs  = document.querySelectorAll('.menu__tab');
+  const dishCards = document.querySelectorAll('.dish-card');
+
+  menuTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      // Update active tab state
+      menuTabs.forEach(t => {
+        t.classList.remove('is-active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      tab.classList.add('is-active');
+      tab.setAttribute('aria-selected', 'true');
+
+      const filter = tab.dataset.filter;
+
+      dishCards.forEach(card => {
+        const category = card.dataset.category;
+        const matches  = filter === 'all' || category === filter;
+
+        if (matches) {
+          // Show card
+          card.style.display = '';
+          // Force reflow to allow transition from hidden state
+          card.offsetHeight; // eslint-disable-line no-unused-expressions
+          card.classList.remove('is-hidden');
+        } else {
+          // Hide card with transition then display:none
+          card.classList.add('is-hidden');
+          setTimeout(() => {
+            // Only set display:none if still hidden (user didn't switch back quickly)
+            if (card.classList.contains('is-hidden')) {
+              card.style.display = 'none';
+            }
+          }, 300);
+        }
+      });
+    });
+  });
+
+  // ─── FLOATING ACTION BUTTON ───
+  const fabToggle  = document.getElementById('fabToggle');
+  const fabActions = document.getElementById('fabActions');
+
+  fabToggle.addEventListener('click', () => {
+    const isOpen = fabActions.classList.toggle('is-hidden');
+    // is-hidden was just toggled: if classList no longer has is-hidden, we opened
+    const opened = !fabActions.classList.contains('is-hidden');
+    fabToggle.classList.toggle('is-open', opened);
+    fabToggle.setAttribute('aria-expanded', String(opened));
+  });
+
+  // Close FAB when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.fab')) {
+      fabActions.classList.add('is-hidden');
+      fabToggle.classList.remove('is-open');
+      fabToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+</script>
+</body>
+</html>
